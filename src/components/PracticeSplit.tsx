@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Briefcase, ArrowRight } from "lucide-react";
 
-const transition = { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] };
+const transition = { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const };
 
 const PracticeSplit = () => {
   return (

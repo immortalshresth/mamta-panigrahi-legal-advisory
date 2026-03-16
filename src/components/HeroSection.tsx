@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Scale } from "lucide-react";
 import advocatePortrait from "@/assets/advocate-portrait.jpg";
 
-const transition = { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] };
+const transition = { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const };
 
 const HeroSection = () => {
   return (
