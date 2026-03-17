@@ -27,7 +27,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-body text-xs text-primary-foreground/50 uppercase tracking-wide">Phone</p>
-                  <p className="font-body text-sm font-medium tabular-nums">+91 98765 43210</p>
+                  <p className="font-body text-sm font-medium tabular-nums">+91 98211 36815</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -36,7 +36,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-body text-xs text-primary-foreground/50 uppercase tracking-wide">Email</p>
-                  <p className="font-body text-sm font-medium">mamta.panigrahi@lawchambers.in</p>
+                  <p className="font-body text-sm font-medium">panigrahiadvmamta@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
