@@ -1,7 +1,47 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    matter: "",
+    description: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name.trim() || !form.phone.trim()) {
+      toast({ title: "Please fill in your name and phone number.", variant: "destructive" });
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-consultation", {
+        body: form,
+      });
+      if (error) throw error;
+      toast({ title: "Consultation request sent!", description: "We'll get back to you within 24 hours." });
+      setForm({ name: "", phone: "", matter: "", description: "" });
+    } catch (err) {
+      console.error(err);
+      toast({ title: "Something went wrong.", description: "Please try again or contact us via WhatsApp.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 lg:py-32 bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 lg:px-8">
@@ -70,26 +110,39 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div>
                 <label className="font-body text-xs text-primary-foreground/50 uppercase tracking-wide block mb-2">Full Name</label>
                 <input
                   type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/10 text-primary-foreground font-body text-sm placeholder:text-primary-foreground/30 focus:outline-none focus:border-accent transition-colors"
                   placeholder="Your name"
+                  required
                 />
               </div>
               <div>
                 <label className="font-body text-xs text-primary-foreground/50 uppercase tracking-wide block mb-2">Phone Number</label>
                 <input
                   type="tel"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/10 text-primary-foreground font-body text-sm placeholder:text-primary-foreground/30 focus:outline-none focus:border-accent transition-colors"
                   placeholder="+91 00000 00000"
+                  required
                 />
               </div>
               <div>
                 <label className="font-body text-xs text-primary-foreground/50 uppercase tracking-wide block mb-2">Legal Matter</label>
-                <select className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/10 text-primary-foreground font-body text-sm focus:outline-none focus:border-accent transition-colors">
+                <select
+                  name="matter"
+                  value={form.matter}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/10 text-primary-foreground font-body text-sm focus:outline-none focus:border-accent transition-colors"
+                >
                   <option value="" className="text-foreground">Select a category</option>
                   <option value="criminal" className="text-foreground">Criminal Defense</option>
                   <option value="civil" className="text-foreground">Civil Litigation</option>
@@ -103,6 +156,9 @@ const ContactSection = () => {
               <div>
                 <label className="font-body text-xs text-primary-foreground/50 uppercase tracking-wide block mb-2">Brief Description</label>
                 <textarea
+                  name="description"
+                  value={form.description}
+                  onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/10 text-primary-foreground font-body text-sm placeholder:text-primary-foreground/30 focus:outline-none focus:border-accent transition-colors resize-none"
                   placeholder="Briefly describe your legal matter..."
@@ -110,11 +166,13 @@ const ContactSection = () => {
               </div>
               <motion.button
                 type="submit"
+                disabled={isSubmitting}
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-7 py-3.5 rounded-lg bg-primary-foreground text-primary font-body text-sm font-semibold shadow-card"
+                className="w-full px-7 py-3.5 rounded-lg bg-primary-foreground text-primary font-body text-sm font-semibold shadow-card disabled:opacity-60 flex items-center justify-center gap-2"
               >
-                Request Consultation
+                {isSubmitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                {isSubmitting ? "Sending..." : "Request Consultation"}
               </motion.button>
               <p className="font-body text-xs text-primary-foreground/40 text-center">
                 All consultations are confidential. We typically respond within 24 hours.
