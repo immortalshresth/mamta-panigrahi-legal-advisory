@@ -91,7 +91,7 @@ const ContactSection = () => {
             </div>
 
             <motion.a
-              href="https://wa.me/9821136815"
+              href="https://api.whatsapp.com/send/?phone=919821136815&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -1 }}
