@@ -69,7 +69,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Consultation Form <onboarding@resend.dev>",
-        to: ["mamta.panigrahi@lawchambers.in"],
+        to: ["panigrahiadvmamta@gmail.com"],
         subject: `New Consultation: ${name} — ${matterLabel[matter] || matter || "General"}`,
         html: emailHtml,
       }),
