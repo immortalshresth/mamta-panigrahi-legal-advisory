@@ -18,7 +18,7 @@ const HeroSection = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary text-muted-foreground font-body text-xs font-medium mb-6 tracking-wide uppercase">
               <Scale className="w-3.5 h-3.5" />
-              High Court & Session Court Advocate
+              Mumbai High Court & Session Court Advocate
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-[1.1] mb-6">
