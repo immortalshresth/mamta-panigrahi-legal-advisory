@@ -90,17 +90,28 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <motion.a
-              href="https://api.whatsapp.com/send/?phone=919821136815&text&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-accent-foreground font-body text-sm font-semibold shadow-card"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Message on WhatsApp
-            </motion.a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <motion.a
+                href="https://api.whatsapp.com/send?phone=919821136815&text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation."
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-accent-foreground font-body text-sm font-semibold shadow-card"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Message on WhatsApp
+              </motion.a>
+              <motion.a
+                href="mailto:panigrahiadvmamta@gmail.com"
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/20 font-body text-sm font-semibold"
+              >
+                <Mail className="w-4 h-4" />
+                Send Email
+              </motion.a>
+            </div>
           </motion.div>
 
           {/* Contact Form */}
