@@ -35,7 +35,7 @@ const PracticeSplit = () => {
             </div>
             <h3 className="text-2xl font-semibold text-foreground mb-3">Courtroom Litigation</h3>
             <p className="font-body text-muted-foreground leading-relaxed mb-6 text-pretty">
-              Zealous representation before the High Court and Session Courts. Specializing in appellate advocacy, 
+              Zealous representation before the Mumbai High Court and Session Courts. Specializing in appellate advocacy, 
               original jurisdiction matters, criminal defense, and civil disputes requiring courtroom precision.
             </p>
             <ul className="font-body text-sm text-muted-foreground space-y-2 mb-8">

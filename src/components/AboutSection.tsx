@@ -4,8 +4,8 @@ import { Award, BookOpen, Users, MapPin } from "lucide-react";
 const credentials = [
   { icon: Award, label: "Bar Council Enrolled", detail: "Licensed High Court Advocate" },
   { icon: BookOpen, label: "LL.B., LL.M.", detail: "Comprehensive Legal Education" },
-  { icon: Users, label: "500+ Cases", detail: "Across Multiple Jurisdictions" },
-  { icon: MapPin, label: "Odisha High Court", detail: "Primary Jurisdiction" },
+  { icon: Users, label: "2000+ Cases", detail: "Across Multiple Jurisdictions" },
+  { icon: MapPin, label: "Mumbai High Court", detail: "Primary Jurisdiction" },
 ];
 
 const AboutSection = () => {
@@ -24,15 +24,21 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
               <p className="text-pretty">
-                Advocate Mamta Panigrahi is a seasoned legal professional with over 15 years of experience 
-                practicing before the High Court of Odisha and various Session and District Courts. Her practice 
-                spans criminal defense, civil litigation, constitutional law, and corporate advisory.
+                Advocate Mamta Panigrahi is a seasoned legal professional with over 26 years of experience 
+                practicing before the Mumbai High Court and various Session and District Courts. Her practice 
+                spans criminal defense, civil litigation, constitutional law, and corporate advisory. She is also 
+                an empanelled Judicial Mediator and a licensed Notary Public.
               </p>
               <p className="text-pretty">
                 With a reputation for meticulous case preparation and persuasive courtroom advocacy, she has 
                 successfully represented clients in complex High Court writ petitions, criminal appeals, and 
                 multi-party civil disputes. Her advisory practice focuses on proactive risk mitigation for 
                 businesses and individuals navigating India's regulatory landscape.
+              </p>
+              <p className="text-pretty">
+                As a Judicial Mediator, she facilitates amicable dispute resolution, helping parties reach 
+                mutually beneficial settlements without prolonged litigation. Her Notary practice provides 
+                authentication and attestation services for legal documents, affidavits, and agreements.
               </p>
               <p className="text-pretty">
                 She is committed to accessible, transparent, and results-oriented legal counsel — ensuring 

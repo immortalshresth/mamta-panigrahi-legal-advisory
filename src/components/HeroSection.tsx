@@ -18,7 +18,7 @@ const HeroSection = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary text-muted-foreground font-body text-xs font-medium mb-6 tracking-wide uppercase">
               <Scale className="w-3.5 h-3.5" />
-              High Court & Session Court Advocate
+              Mumbai High Court & Session Court Advocate
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-[1.1] mb-6">
@@ -27,7 +27,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-lg mb-8 text-pretty">
-              Providing decisive legal representation in the High Court and Session Courts, 
+              Providing decisive legal representation in the Mumbai High Court and Session Courts, 
               paired with proactive consultancy for complex legal landscapes.
             </p>
 
@@ -53,15 +53,15 @@ const HeroSection = () => {
 
             <div className="flex items-center gap-8 mt-10 pt-8 border-t border-border">
               <div>
-                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">15+</p>
+                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">26+</p>
                 <p className="font-body text-sm text-muted-foreground">Years Experience</p>
               </div>
               <div>
-                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">500+</p>
+                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">2000+</p>
                 <p className="font-body text-sm text-muted-foreground">Cases Handled</p>
               </div>
               <div>
-                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">High Court</p>
+                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">Mumbai HC</p>
                 <p className="font-body text-sm text-muted-foreground">Enrolled Advocate</p>
               </div>
             </div>
@@ -78,13 +78,13 @@ const HeroSection = () => {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated">
                 <img
                   src={advocatePortrait}
-                  alt="Advocate Mamta Panigrahi - High Court Lawyer"
+                  alt="Advocate Mamta Panigrahi - Mumbai High Court Lawyer"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-card rounded-xl shadow-card px-5 py-3">
                 <p className="font-body text-xs text-muted-foreground uppercase tracking-wide">Practicing Since</p>
-                <p className="font-display text-lg font-semibold text-foreground tabular-nums">2009</p>
+                <p className="font-display text-lg font-semibold text-foreground tabular-nums">2000</p>
               </div>
             </div>
           </motion.div>
