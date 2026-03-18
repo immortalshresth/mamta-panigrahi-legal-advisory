@@ -4,8 +4,8 @@ import { Award, BookOpen, Users, MapPin } from "lucide-react";
 const credentials = [
   { icon: Award, label: "Bar Council Enrolled", detail: "Licensed High Court Advocate" },
   { icon: BookOpen, label: "LL.B., LL.M.", detail: "Comprehensive Legal Education" },
-  { icon: Users, label: "500+ Cases", detail: "Across Multiple Jurisdictions" },
-  { icon: MapPin, label: "Odisha High Court", detail: "Primary Jurisdiction" },
+  { icon: Users, label: "2000+ Cases", detail: "Across Multiple Jurisdictions" },
+  { icon: MapPin, label: "Mumbai High Court", detail: "Primary Jurisdiction" },
 ];
 
 const AboutSection = () => {
