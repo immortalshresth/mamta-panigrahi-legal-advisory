@@ -78,7 +78,7 @@ const HeroSection = () => {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated">
                 <img
                   src={advocatePortrait}
-                  alt="Advocate Mamta Panigrahi - High Court Lawyer"
+                  alt="Advocate Mamta Panigrahi - Mumbai High Court Lawyer"
                   className="w-full h-full object-cover"
                 />
               </div>
