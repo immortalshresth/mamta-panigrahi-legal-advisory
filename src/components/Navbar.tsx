@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Practice Areas", href: "#practice" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
+  { label: "Notary", href: "/notary" },
   { label: "Contact", href: "#contact" },
 ];
 

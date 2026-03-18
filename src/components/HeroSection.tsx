@@ -27,7 +27,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-lg mb-8 text-pretty">
-              Providing decisive legal representation in the High Court and Session Courts, 
+              Providing decisive legal representation in the Mumbai High Court and Session Courts, 
               paired with proactive consultancy for complex legal landscapes.
             </p>
 

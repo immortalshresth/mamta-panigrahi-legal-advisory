@@ -36,6 +36,11 @@ const AboutSection = () => {
                 businesses and individuals navigating India's regulatory landscape.
               </p>
               <p className="text-pretty">
+                As a Judicial Mediator, she facilitates amicable dispute resolution, helping parties reach 
+                mutually beneficial settlements without prolonged litigation. Her Notary practice provides 
+                authentication and attestation services for legal documents, affidavits, and agreements.
+              </p>
+              <p className="text-pretty">
                 She is committed to accessible, transparent, and results-oriented legal counsel — ensuring 
                 every client receives the attention and strategic rigor their matter demands.
               </p>
