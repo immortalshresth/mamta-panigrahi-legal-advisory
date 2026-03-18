@@ -84,7 +84,7 @@ const HeroSection = () => {
               </div>
               <div className="absolute -bottom-4 -left-4 bg-card rounded-xl shadow-card px-5 py-3">
                 <p className="font-body text-xs text-muted-foreground uppercase tracking-wide">Practicing Since</p>
-                <p className="font-display text-lg font-semibold text-foreground tabular-nums">2009</p>
+                <p className="font-display text-lg font-semibold text-foreground tabular-nums">2000</p>
               </div>
             </div>
           </motion.div>
