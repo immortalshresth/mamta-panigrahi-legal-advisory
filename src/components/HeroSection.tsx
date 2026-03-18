@@ -53,15 +53,15 @@ const HeroSection = () => {
 
             <div className="flex items-center gap-8 mt-10 pt-8 border-t border-border">
               <div>
-                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">15+</p>
+                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">26+</p>
                 <p className="font-body text-sm text-muted-foreground">Years Experience</p>
               </div>
               <div>
-                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">500+</p>
+                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">2000+</p>
                 <p className="font-body text-sm text-muted-foreground">Cases Handled</p>
               </div>
               <div>
-                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">High Court</p>
+                <p className="font-display text-2xl font-semibold text-foreground tabular-nums">Mumbai HC</p>
                 <p className="font-body text-sm text-muted-foreground">Enrolled Advocate</p>
               </div>
             </div>
