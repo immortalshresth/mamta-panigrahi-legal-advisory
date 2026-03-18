@@ -24,9 +24,10 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
               <p className="text-pretty">
-                Advocate Mamta Panigrahi is a seasoned legal professional with over 15 years of experience 
-                practicing before the High Court of Odisha and various Session and District Courts. Her practice 
-                spans criminal defense, civil litigation, constitutional law, and corporate advisory.
+                Advocate Mamta Panigrahi is a seasoned legal professional with over 26 years of experience 
+                practicing before the Mumbai High Court and various Session and District Courts. Her practice 
+                spans criminal defense, civil litigation, constitutional law, and corporate advisory. She is also 
+                an empanelled Judicial Mediator and a licensed Notary Public.
               </p>
               <p className="text-pretty">
                 With a reputation for meticulous case preparation and persuasive courtroom advocacy, she has 
